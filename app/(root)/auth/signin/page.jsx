@@ -88,7 +88,7 @@ const Signin = () => {
               Sign up
             </Button>
             <p className="text-sm mt-8 text-gray-500 bg-gray-100/50 py-5 rounded-md">
-              Don't have an account?
+              Don&apos;t have an account?
               <Link
                 className="underline ml-2 text-green-400"
                 href="/auth/signup"
