@@ -39,7 +39,7 @@ const Sidebar = () => {
           width={80}
           height={80}
         />
-        <p className="text-gray-500 text-xs">All rights Reserved &#169; 2023</p>
+        <p className="text-gray-500 text-xs">All rights Reserved © 2023</p>
         <p className="text-gray-500 text-xs">
           Need help?{' '}
           <Link href="/contact-us" className="text-blue-700">

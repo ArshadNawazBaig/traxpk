@@ -40,7 +40,7 @@ const dummyData = [
     id: 1,
     receipt: (
       <div className="flex items-center gap-4">
-        <Image src="/reciept.svg" width={48} height={48} />
+        <Image src="/reciept.svg" alt="traxpk reciept" width={48} height={48} />
         <div>
           <p className="text-sm">102234599223</p>
           <p className="text-xs text-gray-400">10/18/2023 - 11:00:05</p>
@@ -56,7 +56,7 @@ const dummyData = [
     id: 2,
     receipt: (
       <div className="flex items-center gap-4">
-        <Image src="/reciept.svg" width={48} height={48} />
+        <Image src="/reciept.svg" alt="traxpk reciept" width={48} height={48} />
         <div>
           <p className="text-sm">102234581224</p>
           <p className="text-xs text-gray-400">10/18/2023 - 11:00:05</p>
@@ -72,7 +72,7 @@ const dummyData = [
     id: 3,
     receipt: (
       <div className="flex items-center gap-4">
-        <Image src="/reciept.svg" width={48} height={48} />
+        <Image src="/reciept.svg" alt="traxpk reciept" width={48} height={48} />
         <div>
           <p className="text-sm">102234581225</p>
           <p className="text-xs text-gray-400">10/18/2023 - 11:00:05</p>
@@ -88,7 +88,7 @@ const dummyData = [
     id: 4,
     receipt: (
       <div className="flex items-center gap-4">
-        <Image src="/reciept.svg" width={48} height={48} />
+        <Image src="/reciept.svg" alt="traxpk reciept" width={48} height={48} />
         <div>
           <p className="text-sm">102234581226</p>
           <p className="text-xs text-gray-400">10/18/2023 - 11:00:05</p>
@@ -104,7 +104,7 @@ const dummyData = [
     id: 5,
     receipt: (
       <div className="flex items-center gap-4">
-        <Image src="/reciept.svg" width={48} height={48} />
+        <Image src="/reciept.svg" alt="traxpk reciept" width={48} height={48} />
         <div>
           <p className="text-sm">102234581227</p>
           <p className="text-xs text-gray-400">10/18/2023 - 11:00:05</p>
@@ -120,7 +120,7 @@ const dummyData = [
     id: 6,
     receipt: (
       <div className="flex items-center gap-4">
-        <Image src="/reciept.svg" width={48} height={48} />
+        <Image src="/reciept.svg" alt="traxpk reciept" width={48} height={48} />
         <div>
           <p className="text-sm">102234581228</p>
           <p className="text-xs text-gray-400">10/18/2023 - 11:00:05</p>
@@ -136,7 +136,7 @@ const dummyData = [
     id: 7,
     receipt: (
       <div className="flex items-center gap-4">
-        <Image src="/reciept.svg" width={48} height={48} />
+        <Image src="/reciept.svg" alt="traxpk reciept" width={48} height={48} />
         <div>
           <p className="text-sm">102234581229</p>
           <p className="text-xs text-gray-400">10/18/2023 - 11:00:05</p>
@@ -152,7 +152,7 @@ const dummyData = [
     id: 8,
     receipt: (
       <div className="flex items-center gap-4">
-        <Image src="/reciept.svg" width={48} height={48} />
+        <Image src="/reciept.svg" alt="traxpk reciept" width={48} height={48} />
         <div>
           <p className="text-sm">102234581223</p>
           <p className="text-xs text-gray-400">10/18/2023 - 11:00:05</p>
@@ -168,7 +168,7 @@ const dummyData = [
     id: 9,
     receipt: (
       <div className="flex items-center gap-4">
-        <Image src="/reciept.svg" width={48} height={48} />
+        <Image src="/reciept.svg" alt="traxpk reciept" width={48} height={48} />
         <div>
           <p className="text-sm">102234581223</p>
           <p className="text-xs text-gray-400">10/18/2023 - 11:00:05</p>
@@ -184,7 +184,7 @@ const dummyData = [
     id: 10,
     receipt: (
       <div className="flex items-center gap-4">
-        <Image src="/reciept.svg" width={48} height={48} />
+        <Image src="/reciept.svg" alt="traxpk reciept" width={48} height={48} />
         <div>
           <p className="text-sm">102234581223</p>
           <p className="text-xs text-gray-400">10/18/2023 - 11:00:05</p>
@@ -200,7 +200,7 @@ const dummyData = [
     id: 11,
     receipt: (
       <div className="flex items-center gap-4">
-        <Image src="/reciept.svg" width={48} height={48} />
+        <Image src="/reciept.svg" alt="traxpk reciept" width={48} height={48} />
         <div>
           <p className="text-sm">102234581223</p>
           <p className="text-xs text-gray-400">10/18/2023 - 11:00:05</p>
@@ -216,7 +216,7 @@ const dummyData = [
     id: 12,
     receipt: (
       <div className="flex items-center gap-4">
-        <Image src="/reciept.svg" width={48} height={48} />
+        <Image src="/reciept.svg" alt="traxpk reciept" width={48} height={48} />
         <div>
           <p className="text-sm">102234581223</p>
           <p className="text-xs text-gray-400">10/18/2023 - 11:00:05</p>
@@ -316,7 +316,9 @@ const TableComponent = () => {
         <TableHeader>
           <TableRow>
             {headers.map((header) => (
-              <TableHead className="text-[#0B6D56]">{header.Header}</TableHead>
+              <TableHead className="text-[#0B6D56]" key={header.accessor}>
+                {header.Header}
+              </TableHead>
             ))}
           </TableRow>
         </TableHeader>
