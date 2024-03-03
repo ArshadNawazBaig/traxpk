@@ -18,6 +18,9 @@ export default function Home() {
         <Link href="/customers" className="text-green-500">
           Customers
         </Link>
+        <Link href="/admin/account" className="text-green-500">
+          Admin Account
+        </Link>
       </div>
     </div>
   );

@@ -29,3 +29,28 @@ export const myChannels = [
     mobile: '+1(833)439-1753',
   },
 ];
+
+export const adminAccount = [
+  {
+    name: 'Profile Information',
+    path: '/admin/account',
+  },
+  {
+    name: 'Update Password',
+    path: '/admin/account/update-password',
+  },
+];
+
+export const adminAnalytics = [
+  {
+    name: 'Analytics',
+    path: '/admin/analytics',
+  },
+];
+
+export const adminUsers = [
+  {
+    name: 'Users',
+    path: '/admin/users',
+  },
+];

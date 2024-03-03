@@ -1,5 +1,6 @@
 import Sidebar from '@/components/customer/sidebar';
 import Navbar from '@/components/navbar';
+import { sidebarLinks } from '@/constants';
 import React from 'react';
 
 const CustomerLayout = ({ children }) => {
@@ -11,7 +12,7 @@ const CustomerLayout = ({ children }) => {
           <h3 className="text-lg font-semibold mb-10">Account Management</h3>
 
           <div className="flex gap-4 items-start">
-            <Sidebar />
+            <Sidebar sidebarLinks={sidebarLinks} />
             <div className="rounded-lg bg-white px-4 py-6 w-full">
               {children}
             </div>

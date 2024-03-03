@@ -21,7 +21,7 @@ export function ChannelModal({ isOpen, onClose, title }) {
         <DialogHeader>
           <DialogTitle className="mb-3">{title}</DialogTitle>
           <Separator />
-          <NewChannel />
+          <NewChannel onChange={onChange} />
         </DialogHeader>
       </DialogContent>
     </Dialog>

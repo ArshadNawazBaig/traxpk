@@ -38,7 +38,7 @@ const formSchema = z.object({
   }),
 });
 
-const NewChannel = () => {
+const NewChannel = ({ onChange }) => {
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -51,6 +51,11 @@ const NewChannel = () => {
   function onSubmit(values) {
     console.log(values);
   }
+
+  const handleCancel = (e) => {
+    e.preventDefault();
+    onChange();
+  };
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -125,10 +130,17 @@ const NewChannel = () => {
           </div>
           <div className="col-span-12">
             <div className="flex gap-4 justify-end w-full">
-              <Button className="bg-gradient-to-r from-green-600 rounded-full to-green-500">
+              <Button
+                type="submit"
+                className="bg-gradient-to-r from-green-600 rounded-full to-green-500"
+              >
                 Create
               </Button>
-              <Button className="rounded-full bg-white" variant="outline">
+              <Button
+                className="rounded-full bg-white"
+                variant="outline"
+                onClick={handleCancel}
+              >
                 Cancel
               </Button>
             </div>

@@ -1,5 +1,4 @@
 'use client';
-import { sidebarLinks } from '@/constants';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
@@ -7,7 +6,7 @@ import { Button } from '../ui/button';
 import { Separator } from '../ui/separator';
 import Image from 'next/image';
 
-const Sidebar = () => {
+const Sidebar = ({ sidebarLinks }) => {
   const pathname = usePathname();
   return (
     <div>

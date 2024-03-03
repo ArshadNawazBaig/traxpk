@@ -13,14 +13,14 @@ import {
 export const CSelect = ({ value, label, options, onChange, className }) => {
   return (
     <Select onValueChange={onChange} value={value}>
-      <SelectTrigger className={className}>
+      <SelectTrigger className={`${className} capitalize`}>
         <SelectValue />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectLabel>{label}</SelectLabel>
+          <SelectLabel className="capitalize">{label}</SelectLabel>
           {options.map((option) => (
-            <SelectItem key={option} value={option}>
+            <SelectItem key={option} value={option} className="capitalize">
               {option}
             </SelectItem>
           ))}
