@@ -2,7 +2,7 @@ import React from 'react';
 
 const FinancialCard = ({ title }) => {
   return (
-    <div className="bg-blue-500 py-5 pl-4 pr-5 text-white min-h-[300px]">
+    <div className="bg-[#4472c4] py-5 pl-4 pr-5 text-white min-h-[300px]">
       <div className="flex justify-between items-start">
         <h2 className="">{title}</h2>
         <div className="mb-4">
