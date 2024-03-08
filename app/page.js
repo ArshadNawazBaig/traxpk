@@ -12,6 +12,9 @@ export default function Home() {
         <Link href="/auth/signin" className="text-green-500">
           Signin
         </Link>
+        <Link href="/auth/email-confirmation" className="text-green-500">
+          Email Confirmation
+        </Link>
         <Link href="/account-management" className="text-green-500">
           Account Management
         </Link>
@@ -20,6 +23,9 @@ export default function Home() {
         </Link>
         <Link href="/admin/account" className="text-green-500">
           Admin Account
+        </Link>
+        <Link href="/financial-platform" className="text-green-500">
+          Financial Platform
         </Link>
       </div>
     </div>
