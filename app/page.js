@@ -27,6 +27,9 @@ export default function Home() {
         <Link href="/financial-platform" className="text-green-500">
           Financial Platform
         </Link>
+        <Link href="/lugband" className="text-green-500">
+          Lugband
+        </Link>
       </div>
     </div>
   );
