@@ -30,7 +30,7 @@ const Lugband = () => {
         <div className="col-span-12 md:col-span-10">
           <div className="grid grid-cols-12 gap-8 mt-10">
             <div className="col-span-12 md:col-span-4">
-              <Input value={activeValue} />
+              <Input defaultValue={activeValue} />
               <div className="flex gap-4 flex-wrap justify-center mt-10">
                 {options.map((option) => (
                   <Button
