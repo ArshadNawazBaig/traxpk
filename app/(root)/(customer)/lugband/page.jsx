@@ -1,11 +1,28 @@
+'use client';
 import HotelCard from '@/components/hotel-card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import React from 'react';
+import React, { useState } from 'react';
 
 const options = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const Lugband = () => {
+  const [activeValue, setActiveValue] = useState(2);
+  const handleClick = (val) => {
+    setActiveValue(val);
+  };
+  const hotels = [
+    { id: '01000420', name: 'one' },
+    { id: '01000421', name: 'two' },
+    { id: '01000422', name: 'three' },
+    { id: '01000423', name: 'four' },
+    { id: '01000424', name: 'five' },
+    { id: '01000425', name: 'six' },
+    { id: '01000426', name: 'seven' },
+    { id: '01000427', name: 'eight' },
+    { id: '01000428', name: 'nine' },
+    { id: '01000429', name: 'ten' },
+  ];
   return (
     <div className="container mx-auto">
       <div className="grid grid-cols-12 gap-4 mt-10">
@@ -13,10 +30,15 @@ const Lugband = () => {
         <div className="col-span-12 md:col-span-10">
           <div className="grid grid-cols-12 gap-8 mt-10">
             <div className="col-span-12 md:col-span-4">
-              <Input value="2" />
+              <Input value={activeValue} />
               <div className="flex gap-4 flex-wrap justify-center mt-10">
                 {options.map((option) => (
-                  <Button className="w-12 h-12" size="icon" key={option}>
+                  <Button
+                    className="w-12 h-12"
+                    size="icon"
+                    key={option}
+                    onClick={() => handleClick(option)}
+                  >
                     {option}
                   </Button>
                 ))}
@@ -24,12 +46,12 @@ const Lugband = () => {
               <div className="bg-gray-600 py-6 min-h-[300px] flex items-center px-8 text-white mt-10">
                 <div className="w-full text-center">
                   <div className="flex justify-between items-center mb-10">
-                    <p>2 LugBands</p>
+                    <p>{activeValue} LugBands</p>
                     <p>$8.00 each</p>
                   </div>
                   <div className="flex justify-between items-center">
                     <p>Total</p>
-                    <p>$16.00 each</p>
+                    <p>${activeValue * 8}.00 each</p>
                   </div>
                   <Button className="mt-10 bg-gray-400 text-white">
                     Click Here
@@ -38,8 +60,9 @@ const Lugband = () => {
               </div>
             </div>
             <div className="col-span-12 md:col-span-8">
-              <HotelCard id="01000420" className="mb-4" />
-              <HotelCard id="01000421" className="mb-4" />
+              {hotels.slice(0, activeValue).map(({ id }) => (
+                <HotelCard id={id} key={id} className="mb-4" />
+              ))}
             </div>
           </div>
         </div>
