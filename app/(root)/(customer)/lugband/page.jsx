@@ -2,6 +2,7 @@
 import HotelCard from '@/components/hotel-card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { checkout } from '@/lib/checkout';
 import React, { useState } from 'react';
 
 const options = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -23,6 +24,18 @@ const Lugband = () => {
     { id: '01000428', name: 'nine' },
     { id: '01000429', name: 'ten' },
   ];
+
+  const handleProductCheckout = () => {
+    let item = {
+      price: 'price_1Ouz7HHaeicZDaivZg01JSUG',
+      quantity: activeValue,
+    };
+
+    checkout({
+      lineItems: [item],
+    });
+  };
+
   return (
     <div className="container mx-auto">
       <div className="grid grid-cols-12 gap-4 mt-10">
@@ -53,7 +66,10 @@ const Lugband = () => {
                     <p>Total</p>
                     <p>${activeValue * 8}.00 each</p>
                   </div>
-                  <Button className="mt-10 bg-gray-400 text-white">
+                  <Button
+                    className="mt-10 bg-gray-400 text-white"
+                    onClick={() => handleProductCheckout()}
+                  >
                     Click Here
                   </Button>
                 </div>
